@@ -1,7 +1,11 @@
 import turtle
 
 
+#variables
+paddle_speed = 40
+ball_speed = 0.2
 
+#init
 
 wn = turtle.Screen()
 wn.title("BagoPong")
@@ -34,8 +38,8 @@ ball.shape("square")
 ball.color("blue")
 ball.penup()
 ball.goto(0, 0)
-ball.dx = 0.1
-ball.dy = 0.1
+ball.dx = ball_speed
+ball.dy = ball_speed
 
 #points
 point = turtle.Turtle()
@@ -51,30 +55,28 @@ score_a = 0
 score_b = 0
 
 
-#variables
-
 # Function
 def paddle_a_up():
     y = paddle_a.ycor()
-    y += 20
+    y += paddle_speed
     paddle_a.sety(y)
 
 
 def paddle_a_down():
     y = paddle_a.ycor()
-    y -= 20
+    y -= paddle_speed
     paddle_a.sety(y)
 
 
 def paddle_b_up():
     y = paddle_b.ycor()
-    y += 20
+    y += paddle_speed
     paddle_b.sety(y)
 
 
 def paddle_b_down():
     y = paddle_b.ycor()
-    y -= 20
+    y -= paddle_speed
     paddle_b.sety(y)
 
 
