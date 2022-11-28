@@ -1,0 +1,7 @@
+pog = str(input('Qual o seu nome inteiro: ')).strip()
+print('o nome é {}'.format(pog))
+print('tudo maiusculo: {}'.format(pog.upper()))
+print('tudo minuisculo: {}'.format(pog.lower()))
+print('quantidade de letras: {}'.format(len(pog) - pog.count(' ')))
+pog_separado = pog.split()
+print('seu primeiro nome é {} e tem {} letras'.format(pog_separado[0], len(pog_separado[0])))
